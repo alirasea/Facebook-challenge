@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The facebook</title>
+</head>
+<style>
+  
+</style>
+<body style="background-color: rgb(2, 155, 182);">
+   
+    <div style="text-align: center;margin-top: 15px;">
+    <%- include('new-feed.ejs') %>
+    <br>
+    <br>
+    <% for (let i =0 ; i < articles.length; i++) { %>
+        <h3><%= articles[i].name %></h3>
+        <p><%= articles[i].massage.slice(0, 40) %> </p>
+        <p> <%= articles[i].created_at %> </p>
+        <a href="/fullFEED/<%= articles[i]._id %>" style="color: blue; background-color: antiquewhite;">see more...........</a>
+    <% } %>
+    </div>
+
+
+</body>
+</html>

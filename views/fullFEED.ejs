@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container" style="text-align: center; margin-top: 10%; background-color: aqua;"> 
+    <a href="/" style="color: aliceblue; background-color: rgb(57, 31, 0);">Home</a>
+
+    <div> <h3><%= feed.name %></h3>
+        <p><%= feed.massage %></p>
+        <p><%= feed.created_at %></p></div>
+          
+        <form action="/delete-feed/<%=feed.id %>" method="post">
+            <button style="color: white; background-color: rgb(78, 0, 0);">Delete</button>
+
+        </form>
+        <br>
+        <br>
+        <a href="/update-feed/<%=feed.id %>" style="color: white; background-color: rgb(8, 8, 89);">Edit</a>
+
+    </div>
+      
+</body>
+</html>
